@@ -1,0 +1,29 @@
+model:
+  name: light
+  language: c++
+  args: ../models/light_v0.cpp
+  function: light
+  is_server:
+    input: doy
+    output: intensity
+  inputs:
+    - name: doy
+      datatype:
+        type: float
+        units: day
+      default_value: 10.5
+    - name: geom
+      datatype:
+        type: obj
+      default_file:
+        name: ../meshes/plants-2.obj
+        filetype: obj
+        count: 50
+  output:
+    - name: intensity
+      datatype:
+        type: float
+        units: ergs/s
+      default_file:
+        name: ../output/light.txt
+        filetype: table

@@ -1,0 +1,26 @@
+model:
+  name: growth
+  language: python
+  args: ../models/yield_v0.py
+  function: growth_rate
+  inputs:
+    - name: t
+      datatype:
+        type: int
+      default_value: 80.5
+    - name: mass
+      datatype:
+        type: float
+      default_value: 2000
+    - name: LAI
+      datatype:
+        type: float
+      default_value: 2.7
+  outputs:
+    - name: growth_rate
+      datatype:
+        type: float
+      default_file:
+        name: ../output/growth_v0.txt
+        filetype: table
+        field_names: growth_rate

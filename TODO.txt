@@ -1,0 +1,4 @@
+* Create plant geometry with more leaves
+* Add slide on results when comparing different geometries
+* Add images of plant geometries to slides
+* Push and verify binder works

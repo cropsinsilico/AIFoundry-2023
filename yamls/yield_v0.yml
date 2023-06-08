@@ -1,0 +1,38 @@
+model:
+  name: yield
+  language: python
+  args: ../models/yield_v0.py
+  function: yield_curve
+  inputs:
+    - name: tstart
+      datatype:
+        type: float
+        units: day
+      default_value: 80
+    - name: tend
+      datatype:
+        type: float
+        units: day
+      default_value: 84
+    - name: tstep
+      datatype:
+        type: float
+        units: day
+      default_value: 0.1
+    - name: mstart
+      datatype:
+        type: float
+        units: g
+      default_value: 2000
+    - name: LAI
+      datatype:
+        type: float
+      default_value: 2.7
+  outputs:
+    - name: mass
+      default_file:
+        name: ../output/yield_v0.txt
+        filetype: table
+        as_array: true
+        field_names: time, mass
+        field_units: days, g
